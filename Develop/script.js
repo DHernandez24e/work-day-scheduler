@@ -110,3 +110,25 @@ else if (currentTime < timeblockNine) {
 else if (currentTime = timeblockNine) {
     $("#block-nine").addClass("present");
 }
+
+//Save Button Functions
+
+//Save 9AM Task
+$("#row-one").on("click", "#save-one", function () {
+    event.preventDefault();
+    var textOne = $("#input-one").val().trim();
+
+    localStorage.setItem("9AM Task", JSON.stringify(textOne));
+});
+//Load 9AM Task
+$("#input-one").val(JSON.parse(localStorage.getItem("9AM Task")));
+
+//Save 10AM Task
+$("#row-two").on("click", "#save-two", function () {
+    event.preventDefault();
+    var textTwo = $("#input-two").val().trim();
+
+    localStorage.setItem("10AM Task", JSON.stringify(textTwo));
+});
+//Load 10AM Task
+$("#input-two").val(JSON.parse(localStorage.getItem("10AM Task")));
