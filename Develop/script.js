@@ -5,8 +5,6 @@ var currentTime = moment().format("H");
 
 currentDay.textContent = moment().format("dddd, MMMM Do");
 
-console.log(currentTime);
-
 //Time-block variables
 
 var timeblockOne = 9;
@@ -20,6 +18,7 @@ var timeblockEight = 16;
 var timeblockNine = 17;
 
 //Conditional CSS stylings for time
+
 //Timeblock One
 if (currentTime > timeblockOne) {
     $("#block-one").addClass("past");
@@ -132,3 +131,73 @@ $("#row-two").on("click", "#save-two", function () {
 });
 //Load 10AM Task
 $("#input-two").val(JSON.parse(localStorage.getItem("10AM Task")));
+
+//Save 11AM Task
+$("#row-three").on("click", "#save-three", function () {
+    event.preventDefault();
+    var textThree = $("#input-three").val().trim();
+
+    localStorage.setItem("11AM Task", JSON.stringify(textThree));
+});
+//Load 11AM Task
+$("#input-three").val(JSON.parse(localStorage.getItem("11AM Task")));
+
+//Save 12PM Task
+$("#row-four").on("click", "#save-four", function () {
+    event.preventDefault();
+    var textFour = $("#input-four").val().trim();
+
+    localStorage.setItem("12PM Task", JSON.stringify(textFour));
+});
+//Load 12PM Task
+$("#input-four").val(JSON.parse(localStorage.getItem("12PM Task")));
+
+//Save 1PM Task
+$("#row-five").on("click", "#save-five", function () {
+    event.preventDefault();
+    var textFive = $("#input-five").val().trim();
+
+    localStorage.setItem("1PM Task", JSON.stringify(textFive));
+});
+//Load 1PM Task
+$("#input-five").val(JSON.parse(localStorage.getItem("1PM Task")));
+
+//Save 2PM Task
+$("#row-six").on("click", "#save-six", function () {
+    event.preventDefault();
+    var textSix = $("#input-six").val().trim();
+
+    localStorage.setItem("2PM Task", JSON.stringify(textSix));
+});
+//Load 2PM Task
+$("#input-six").val(JSON.parse(localStorage.getItem("2PM Task")));
+
+//Save 3PM Task
+$("#row-seven").on("click", "#save-seven", function () {
+    event.preventDefault();
+    var textSeven = $("#input-seven").val().trim();
+
+    localStorage.setItem("3PM Task", JSON.stringify(textSeven));
+});
+//Load 3PM Task
+$("#input-seven").val(JSON.parse(localStorage.getItem("3PM Task")));
+
+//Save 4PM Task
+$("#row-eight").on("click", "#save-eight", function () {
+    event.preventDefault();
+    var textEight = $("#input-eight").val().trim();
+
+    localStorage.setItem("4PM Task", JSON.stringify(textEight));
+});
+//Load 4PM Task
+$("#input-eight").val(JSON.parse(localStorage.getItem("4PM Task")));
+
+//Save 5PM Task
+$("#row-nine").on("click", "#save-nine", function () {
+    event.preventDefault();
+    var textNine = $("#input-nine").val().trim();
+
+    localStorage.setItem("5PM Task", JSON.stringify(textNine));
+});
+//Load 5PM Task
+$("#input-nine").val(JSON.parse(localStorage.getItem("5PM Task")));
