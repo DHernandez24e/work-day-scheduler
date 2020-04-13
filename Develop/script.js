@@ -29,7 +29,8 @@ else if (currentTime < timeblockOne) {
 else if (currentTime = timeblockOne) {
     $("#block-one").addClass("present");
 }
-//Timeblock TWo
+
+//Timeblock Two
 if (currentTime > timeblockTwo) {
     $("#block-two").addClass("past");
 }
@@ -39,6 +40,7 @@ else if (currentTime < timeblockTwo) {
 else if (currentTime = timeblockTwo) {
     $("#block-two").addClass("present");
 }
+
 //Timeblock Three
 if (currentTime > timeblockThree) {
     $("#block-three").addClass("past");
@@ -49,6 +51,7 @@ else if (currentTime < timeblockThree) {
 else if (currentTime = timeblockThree) {
     $("#block-three").addClass("present");
 }
+
 //Timeblock Four
 if (currentTime > timeblockFour) {
     $("#block-four").addClass("past");
@@ -59,6 +62,7 @@ else if (currentTime < timeblockFour) {
 else if (currentTime = timeblockFour) {
     $("#block-four").addClass("present");
 }
+
 //Timeblock Five
 if (currentTime > timeblockFive) {
     $("#block-five").addClass("past");
@@ -69,6 +73,7 @@ else if (currentTime < timeblockFive) {
 else if (currentTime = timeblockFive) {
     $("#block-five").addClass("present");
 }
+
 //Timeblock Six
 if (currentTime > timeblockSix) {
     $("#block-six").addClass("past");
@@ -79,6 +84,7 @@ else if (currentTime < timeblockSix) {
 else if (currentTime = timeblockSix) {
     $("#block-six").addClass("present");
 }
+
 //Timeblock Seven
 if (currentTime > timeblockSeven) {
     $("#block-seven").addClass("past");
@@ -89,6 +95,7 @@ else if (currentTime < timeblockSeven) {
 else if (currentTime = timeblockSeven) {
     $("#block-seven").addClass("present");
 }
+
 //Timeblock Eight
 if (currentTime > timeblockEight) {
     $("#block-eight").addClass("past");
@@ -99,6 +106,7 @@ else if (currentTime < timeblockEight) {
 else if (currentTime = timeblockEight) {
     $("#block-eight").addClass("present");
 }
+
 //Timeblock Nine
 if (currentTime > timeblockNine) {
     $("#block-nine").addClass("past");
@@ -110,7 +118,7 @@ else if (currentTime = timeblockNine) {
     $("#block-nine").addClass("present");
 }
 
-//Save Button Functions
+//Save/Load Functions
 
 //Save 9AM Task
 $("#row-one").on("click", "#save-one", function () {
@@ -119,6 +127,7 @@ $("#row-one").on("click", "#save-one", function () {
 
     localStorage.setItem("9AM Task", JSON.stringify(textOne));
 });
+
 //Load 9AM Task
 $("#input-one").val(JSON.parse(localStorage.getItem("9AM Task")));
 
@@ -129,6 +138,7 @@ $("#row-two").on("click", "#save-two", function () {
 
     localStorage.setItem("10AM Task", JSON.stringify(textTwo));
 });
+
 //Load 10AM Task
 $("#input-two").val(JSON.parse(localStorage.getItem("10AM Task")));
 
@@ -139,6 +149,7 @@ $("#row-three").on("click", "#save-three", function () {
 
     localStorage.setItem("11AM Task", JSON.stringify(textThree));
 });
+
 //Load 11AM Task
 $("#input-three").val(JSON.parse(localStorage.getItem("11AM Task")));
 
@@ -149,6 +160,7 @@ $("#row-four").on("click", "#save-four", function () {
 
     localStorage.setItem("12PM Task", JSON.stringify(textFour));
 });
+
 //Load 12PM Task
 $("#input-four").val(JSON.parse(localStorage.getItem("12PM Task")));
 
@@ -159,6 +171,7 @@ $("#row-five").on("click", "#save-five", function () {
 
     localStorage.setItem("1PM Task", JSON.stringify(textFive));
 });
+
 //Load 1PM Task
 $("#input-five").val(JSON.parse(localStorage.getItem("1PM Task")));
 
@@ -169,6 +182,7 @@ $("#row-six").on("click", "#save-six", function () {
 
     localStorage.setItem("2PM Task", JSON.stringify(textSix));
 });
+
 //Load 2PM Task
 $("#input-six").val(JSON.parse(localStorage.getItem("2PM Task")));
 
@@ -179,6 +193,7 @@ $("#row-seven").on("click", "#save-seven", function () {
 
     localStorage.setItem("3PM Task", JSON.stringify(textSeven));
 });
+
 //Load 3PM Task
 $("#input-seven").val(JSON.parse(localStorage.getItem("3PM Task")));
 
@@ -189,6 +204,7 @@ $("#row-eight").on("click", "#save-eight", function () {
 
     localStorage.setItem("4PM Task", JSON.stringify(textEight));
 });
+
 //Load 4PM Task
 $("#input-eight").val(JSON.parse(localStorage.getItem("4PM Task")));
 
@@ -199,5 +215,8 @@ $("#row-nine").on("click", "#save-nine", function () {
 
     localStorage.setItem("5PM Task", JSON.stringify(textNine));
 });
+
 //Load 5PM Task
 $("#input-nine").val(JSON.parse(localStorage.getItem("5PM Task")));
+
+// I love jQuery, makes this so much easier
